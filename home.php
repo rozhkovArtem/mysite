@@ -39,6 +39,7 @@
   </div>
   <section class="section">
     <div class="container">
+
       <div class="section_header">
         <h3 class="section_suptitle">What we do</h3>
         <h2 class="section_title">Story about us</h2>
@@ -46,6 +47,28 @@
           <p>Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст </p>
         </div>
       </div>
+
+      <div class="about">
+        <div class="about_item">
+          <div class="about_img">
+            <img src="assets/images/about/1.jpg" width="380" height="250" alt="1">
+          </div>
+          <div class="about_text">Что-нибудь</div>
+        </div>
+        <div class="about_item">
+          <div class="about_img">
+            <img src="assets/images/about/2.jpg" width="380" height="250" alt="2">
+          </div>
+          <div class="about_text">Что-нибудь</div>
+        </div>
+        <div class="about_item">
+          <div class="about_img">
+            <img src="assets/images/about/3.jpg" width="380" height="250" alt="3">
+          </div>
+          <div class="about_text">Что-нибудь</div>
+        </div>
+      </div>
+
     </div>
   </section>
 </body>
