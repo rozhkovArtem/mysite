@@ -13,14 +13,14 @@
   <header class="header">
     <div class="container">
       <div class="header_inner">
-        <div class="header_logo">IU4-12B</div>
+        <div class="header_logo">IU4-12B </div>
 
         <nav class="nav">
-          <a class="nav_link active" href="#">About</a>
-          <a class="nav_link" href="#">Servise</a>
-          <a class="nav_link" href="#">Blog</a>
-          <a class="nav_link" href="#">Work</a>
-          <a class="nav_link" href="#">Contact</a>
+          <a class="nav_link active" href="#">Домашняя</a>
+          <a class="nav_link" href="#">Каталог</a>
+          <a class="nav_link" href="#">Отзывы и предложения</a>
+          <a class="nav_link" href="#">Регистрация</a>
+          <a class="nav_link" href="#">Вход</a>
         </nav>
 
       </div>
@@ -30,10 +30,10 @@
   <div class="intro">
     <div class="container">
       <div class="intro_inner">
-        <h2 class="intro_suptitle">Creative template</h2>
-        <h1 class="intro_title">Welcome to IU4-12B</h1>
+        <h2 class="intro_suptitle">Интернет-магазин</h2>
+        <h1 class="intro_title">Одежды IU4-12B</h1>
 
-        <a class="btn" href="#">Learn More</a>
+        <a class="btn" href="#">Войти</a>
       </div>
     </div>
   </div>
@@ -41,10 +41,10 @@
     <div class="container">
 
       <div class="section_header">
-        <h3 class="section_suptitle">What we do</h3>
-        <h2 class="section_title">Story about us</h2>
+        <h3 class="section_suptitle">Что мы продаем</h3>
+        <h2 class="section_title">Введение</h2>
         <div class="section_text">
-          <p>Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст Здесь будет какой-то текст </p>
+          <p>Мы продаем наш продукт со времён Второй Мировой Войны... Наши клиенты оставляют только положительные отзывы, или они перестают существовать...</p>
         </div>
       </div>
 
@@ -53,24 +53,66 @@
           <div class="about_img">
             <img src="assets/images/about/1.jpg" width="380" height="250" alt="1">
           </div>
-          <div class="about_text">Что-нибудь</div>
+          <div class="about_text">Футболки</div>
         </div>
         <div class="about_item">
           <div class="about_img">
             <img src="assets/images/about/2.jpg" width="380" height="250" alt="2">
           </div>
-          <div class="about_text">Что-нибудь</div>
+          <div class="about_text">Толстовки</div>
         </div>
         <div class="about_item">
           <div class="about_img">
             <img src="assets/images/about/3.jpg" width="380" height="250" alt="3">
           </div>
-          <div class="about_text">Что-нибудь</div>
+          <div class="about_text">Штаны</div>
         </div>
       </div>
 
     </div>
   </section>
+
+  <div class="statistics">
+    <div class="container">
+      <div class="stat">
+
+        <div class="stat_item">
+          <div class="stat_count">42</div>
+          <div class="stat_text">потраченных нервов</div>
+        </div>
+        <div class="stat_item">
+          <div class="stat_count">123</div>
+          <div class="stat_text">попытки сделать что-то</div>
+        </div>
+        <div class="stat_item">
+          <div class="stat_count">15</div>
+          <div class="stat_text">тысяч недовольных клиентов</div>
+        </div>
+        <div class="stat_item">
+          <div class="stat_count">99</div>
+          <div class="stat_text">кружек кофе</div>
+        </div>
+        <div class="stat_item">
+          <div class="stat_count">24</div>
+          <div class="stat_text">участника</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+    <div class="section_header">
+        <h3 class="section_suptitle">что то там</h3>
+        <h2 class="section_title">не знаю пока</h2>
+        
+        
+      </div>
+    </div>
+  </section>
+
+
 </body>
 
 </html>
