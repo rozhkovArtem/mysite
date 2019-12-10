@@ -19,8 +19,14 @@
           <a class="nav_link active" href="#">Домашняя</a>
           <a class="nav_link" href="#">Каталог</a>
           <a class="nav_link" href="#">Отзывы и предложения</a>
-          <a class="nav_link" href="#">Регистрация</a>
-          <a class="nav_link" href="#">Вход</a>
+      
+          <?php
+          session_start();
+          if(isset($_SESSION["username"])){
+        echo "<a class=\"nav_link\" href=\"logout.php\">Выход</a>";
+          } else { echo "<a class=\"nav_link\" href=\"registration.php\">Регистрация</a>
+          <a class=\"nav_link\" href=\"login.php\">Вход</a>";}
+          ?>
         </nav>
 
       </div>
@@ -33,7 +39,7 @@
         <h2 class="intro_suptitle">Интернет-магазин</h2>
         <h1 class="intro_title">Одежды IU4-12B</h1>
 
-        <a class="btn" href="#">Войти</a>
+        <a class="btn" href="login.php">Войти</a>
       </div>
     </div>
   </div>
