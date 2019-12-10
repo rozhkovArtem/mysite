@@ -52,7 +52,7 @@ h6 {
 
 .intro_title {
     color: #fff;
-    font-size: 130px;
+    font-size: 100px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
@@ -294,4 +294,80 @@ h6 {
 .stat_text {
     font-style: 14px;
     text-transform: uppercase;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* form */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/intro.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.form_inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form_header {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.form_header_reg {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.input {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+.submit {
+    background-color: rgba(7, 251, 239, 0);
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid #fff;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.submit:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.form_text {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
 }
