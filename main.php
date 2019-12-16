@@ -47,15 +47,15 @@
 	<h6>Добавление продукта</h6>
     </div>
 	<form method="post" enctype="multipart/form-data" >
-		<input class="input" type="text" name="stype" value="<?php if(isSet($_POST['stype'])){echo $_POST['stype'];}?>" placeholder="type">
-		<input class="input" type="text" name="name" value="<?php if(isSet($_POST['name'])){echo $_POST['name'];}?>" placeholder="name">
-		<textarea class="input" name="descr" placeholder="description"></textarea>
-		<input class="input" type="text" name="mnf" value="<?php if(isSet($_POST['mnf'])){echo $_POST['mnf'];}?>" placeholder="manufacturer">
-		<input class="input" type="text" name="tag" value="<?php if(isSet($_POST['tag'])){echo $_POST['tag'];}?>" placeholder="pricetag">
-		<input class="input" type="file" name="pic">
+		<input class="input" type="text" name="stype" value="<?php if(isSet($_POST['stype'])){echo $_POST['stype'];}?>" placeholder="тип">
+		<input class="input" type="text" name="name" value="<?php if(isSet($_POST['name'])){echo $_POST['name'];}?>" placeholder="название">
+		<textarea class="input" name="descr" placeholder="описание"></textarea>
+		<input class="input" type="hidden" name="mnf" value="000" >
+		<input class="input" type="text" name="tag" value="<?php if(isSet($_POST['tag'])){echo $_POST['tag'];}?>" placeholder="цена">
+		<input class="input" type="file" name="img">
 		<input class="input" type="hidden" name="doadd" value="1";>
-		<input type="hidden" name="MAX_FILE_SIZE" value="3000">
-		<input class="submit" type="submit">
+		
+		<input class="submit" type="submit" value="добавить">
 	</form>
 	</div>
 	</div>
@@ -68,11 +68,15 @@
 	$mnf=$_POST['mnf'];
 	$tag=$_POST['tag'];
 	$descr=$_POST['descr'];
-	$dir='/var/www/html/11sem/';
-	$link=$dir . basename($_FILES['pic']['name']);
-	$q="INSERT INTO products VALUES(DEFAULT,'$stype','$name','$mnf','$tag','$descr','$link',DEFAULT);";
- 	copy($_FILES['pic']['tmp_name'],$link);
+	move_uploaded_file($_FILES['img']['tmp_name'], "assets/images/catalog/".$_FILES['img']['name']);
+	$way = "/var/www/html/mysite/assets/images/catalog/".$_FILES['img']['name'];
+	$q="INSERT INTO products VALUES(DEFAULT,'$stype','$name','$mnf','$tag','$descr','$way',DEFAULT);";
+	 copy($_FILES['img']['name'], "/var/www/html/mysite/assets/images/catalog/");
 	mysqli_query($dbc,$q);
+	
 	?>
 </body>
 </html>
+
+
+
