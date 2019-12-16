@@ -17,8 +17,8 @@
 
         <nav class="nav">
           <a class="nav_link active" href="#">Домашняя</a>
-          <a class="nav_link" href="#">Каталог</a>
-          <a class="nav_link" href="#">Отзывы и предложения</a>
+          <a class="nav_link" href="catalog.php">Каталог</a>
+          
       
           <?php
           session_start();
@@ -107,16 +107,7 @@
     </div>
   </div>
 
-  <section class="section">
-    <div class="container">
-    <div class="section_header">
-        <h3 class="section_suptitle">что то там</h3>
-        <h2 class="section_title">не знаю пока</h2>
-        
-        
-      </div>
-    </div>
-  </section>
+
 
 
 </body>
