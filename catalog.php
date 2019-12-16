@@ -7,12 +7,9 @@ include("auth.php");
 <head>
   <meta charset="utf-8">
   <title>Каталог</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    body {
-      background-image: url(../images/intro.jpg);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -28,7 +25,7 @@ include("auth.php");
         <nav class="nav">
           <a class="nav_link" href="home.php">Домашняя</a>
           <a class="nav_link active" href="#">Каталог</a>
-          <a class="nav_link" href="#">Отзывы и предложения</a>
+          
           <?php
           $dbc = mysqli_connect('localhost', 'rozhkov', '1', 'register');
           $nick = $_SESSION['username'];
@@ -60,46 +57,37 @@ include("auth.php");
               <h2 class="section_title">Футболки</h2>
             </div>
         </section>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">футболка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/f1.jpg" width="220" height="250" alt="фото"></a></div>
-            <p class="price">1234 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
+
+
+
+
+        <?php
+        $dbc = mysqli_connect('localhost', 'rozhkov', '1', 'register');
+        $sql = "SELECT * FROM products WHERE stype='f'";
+        $search_mysql = mysqli_query($dbc, $sql);
+        while ($row = mysqli_fetch_array($search_mysql)) {
+
+          $id = $row['id'];
+          ?>
+
+          <div class="product_main">
+            <?php
+              $sql = "SELECT * FROM products WHERE stype='f'";
+              $picture = mysqli_query($dbc, $sql);
+              $picture = mysqli_fetch_array($picture);
+              $img = $picture['link'];
+              ?>
+
+            <div class="product">
+              <h2><a class="product_link" href="product.php?id=<?php echo $id; ?>"><?php echo $row['name']; ?></a></h2>
+              <div class="ptoduct_img"><a href="product.php?id=<?php echo $id; ?>"><img src="<?php echo $img; ?>" width="220" height="230" alt="фото"></a></div>
+              <p class="price"><?php echo $row['pricetag']; ?> <span>руб</span><a href="product.php?id=<?php echo $id; ?>"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
+            </div>
+            <p class="bot_dot"></p>
           </div>
-          <p class="bot_dot"></p>
-        </div>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">футболка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/f1.jpg" width="220" height="250" alt="фото"></a></div>
-            <p class="price">1234 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-          </div>
-          <p class="bot_dot"></p>
-        </div>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">футболка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/f1.jpg" width="220" height="250" alt="фото"></a></div>
-            <p class="price">1234 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-          </div>
-          <p class="bot_dot"></p>
-        </div>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">футболка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/f1.jpg" width="220" height="250" alt="фото"></a></div>
-            <p class="price">1234 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-          </div>
-          <p class="bot_dot"></p>
-        </div>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">футболка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/f1.jpg" width="220" height="250" alt="фото"></a></div>
-            <p class="price">1234 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-          </div>
-          <p class="bot_dot"></p>
-        </div>
+
+        <?php } ?>
+
       </div>
 
 
@@ -110,22 +98,33 @@ include("auth.php");
               <h2 class="section_title">Толстовки</h2>
             </div>
         </section>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">толстовка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/t1.jpg" width="220" height="230" alt="фото"></a></div>
-            <p class="price">2222 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
+
+        <?php
+        $dbc = mysqli_connect('localhost', 'rozhkov', '1', 'register');
+        $sql = "SELECT * FROM products WHERE stype='t'";
+        $search_mysql = mysqli_query($dbc, $sql);
+        while ($row = mysqli_fetch_array($search_mysql)) {
+
+          $id = $row['id'];
+          ?>
+
+          <div class="product_main">
+            <?php
+              $sql = "SELECT * FROM products WHERE stype='t'";
+              $picture = mysqli_query($dbc, $sql);
+              $picture = mysqli_fetch_array($picture);
+              $img = $picture['link'];
+              ?>
+
+            <div class="product">
+              <h2><a class="product_link" href="product.php?id=<?php echo $id; ?>"><?php echo $row['name']; ?></a></h2>
+              <div class="ptoduct_img"><a href="product.php?id=<?php echo $id; ?>"><img src="<?php echo $img; ?>" width="220" height="230" alt="фото"></a></div>
+              <p class="price"><?php echo $row['pricetag']; ?> <span>руб</span><a href="product.php?id=<?php echo $id; ?>"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
+            </div>
+            <p class="bot_dot"></p>
           </div>
-          <p class="bot_dot"></p>
-        </div>
-        <div class="product_main">
-          <div class="product">
-            <h2><a class="product_link" href="#">толстовка 1</a></h2>
-            <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/t1.jpg" width="220" height="230" alt="фото"></a></div>
-            <p class="price">2222 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-          </div>
-          <p class="bot_dot"></p>
-        </div>
+
+        <?php } ?>
       </div>
 
 
@@ -139,25 +138,40 @@ include("auth.php");
             <h2 class="section_title">Штаны</h2>
           </div>
       </section>
-      <div class="product_main">
-        <div class="product">
-          <h2><a class="product_link" href="#">Штаны 1</a></h2>
-          <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/s1.jpg" width="220" height="230" alt="фото"></a></div>
-          <p class="price">3333 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-        </div>
-        <p class="bot_dot"></p>
-      </div>
-      <div class="product_main">
-        <div class="product">
-          <h2><a class="product_link" href="#">Штаны 1</a></h2>
-          <div class="ptoduct_img"><a href="#"><img src="assets/images/catalog/s1.jpg" width="220" height="230" alt="фото"></a></div>
-          <p class="price">3333 <span>руб</span><a href="#"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
-        </div>
-        <p class="bot_dot"></p>
-      </div>
-    </div>
 
-  </div>
+
+      <?php
+      $dbc = mysqli_connect('localhost', 'rozhkov', '1', 'register');
+      $sql = "SELECT * FROM products WHERE stype='s'";
+      $search_mysql = mysqli_query($dbc, $sql);
+      while ($row = mysqli_fetch_array($search_mysql)) {
+
+        $id = $row['id'];
+        ?>
+
+        <div class="product_main">
+          <?php
+            $sql = "SELECT * FROM products WHERE stype='s'";
+            $picture = mysqli_query($dbc, $sql);
+            $picture = mysqli_fetch_array($picture);
+            $img = $picture['link'];
+            ?>
+
+          <div class="product">
+            <h2><a class="product_link" href="product.php?id=<?php echo $id; ?>"><?php echo $row['name']; ?></a></h2>
+            <div class="ptoduct_img"><a href="product.php?id=<?php echo $id; ?>"><img src="<?php echo $img; ?>" width="220" height="230" alt="фото"></a></div>
+            <p class="price"><?php echo $row['pricetag']; ?> <span>руб</span><a href="product.php?id=<?php echo $id; ?>"><img src="assets/images/catalog/view.jpg" width="70" height="30" alt="просмотр"></a></p>
+          </div>
+          <p class="bot_dot"></p>
+        </div>
+
+      <?php } ?>
+
+
+
+
+
+    </div>
   </div>
 
   </div>
