@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Регистрация</title>
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
 </head>
 <body>
 <?php
@@ -31,7 +32,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date', '0')";
                       <nav class="nav">
                          <a class="nav_link" href="home.php">Домашняя</a>
                          <a class="nav_link" href="#">Каталог</a>
-                         <a class="nav_link" href="#">Отзывы и предложения</a>
+                         
                          <a class="nav_link active" href="registration.php">Регистрация</a>
                          <a class="nav_link" href="login.php">Вход</a>
                   </nav>
@@ -59,7 +60,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date', '0')";
            <nav class="nav">
               <a class="nav_link" href="рщьуюзрз">Домашняя</a>
               <a class="nav_link" href="#">Каталог</a>
-              <a class="nav_link" href="#">Отзывы и предложения</a>
+              
               <a class="nav_link active" href="registration.php">Регистрация</a>
               <a class="nav_link" href="login.php">Вход</a>
        </nav>
